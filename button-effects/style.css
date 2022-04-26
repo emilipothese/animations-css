@@ -8,7 +8,7 @@ body {
 
 a {
   margin-bottom: 20px;
-  width: 250px;
+  width: 270px;
   text-align: center;
 }
 
@@ -221,4 +221,78 @@ a.border:after {
 a.border:hover:before, a.border:hover:after {
   height: 100%;
   width: 100%;
+}
+
+/* ----- border appear effect ----- */
+a.app-borders {
+  text-decoration: none;
+  color: #272727;
+  font-family: sans-serif;
+  font-size: 40px;
+  padding: 40px 80px;
+  border: none;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  overflow: hidden;
+}
+
+a.app-borders:before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0px;
+  width: 100%;
+  height: 5px;
+  background-color: #272727;
+  transition: all 0.5s;
+}
+
+a.app-borders:hover:before {
+  left: 0;
+}
+
+a.app-borders:after {
+  content: "";
+  position: absolute;
+  right: -100%;
+  bottom: 0px;
+  width: 100%;
+  height: 5px;
+  background-color: #272727;
+  transition: all 0.5s;
+}
+
+a.app-borders:hover:after {
+  right: 0;
+}
+
+.app-borders span:before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: -100%;
+  width: 5px;
+  height: 100%;
+  background-color: #272727;
+  transition: all 0.5s;
+}
+
+.app-borders:hover span:before {
+  top: 0;
+}
+
+.app-borders span:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -100%;
+  width: 5px;
+  height: 100%;
+  background-color: #272727;
+  transition: all 0.5s;
+}
+
+.app-borders:hover span:after {
+  bottom: 0;
 }
