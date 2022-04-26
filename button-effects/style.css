@@ -8,6 +8,8 @@ body {
 
 a {
   margin-bottom: 20px;
+  width: 250px;
+  text-align: center;
 }
 
 /* ----- rotate ----- */
