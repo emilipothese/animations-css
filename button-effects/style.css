@@ -73,3 +73,40 @@ a.swipe:hover:before {
 a.swipe:hover {
   color: white;
 }
+
+/* ----- swipe text ----- */
+a.text {
+  text-decoration: none;
+  color: #272727;
+  font-family: sans-serif;
+  font-size: 45px;
+  border: 5px solid #272727;
+  padding: 40px 80px;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+a.text:before {
+  content: "Hover!";
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color:crimson;
+  height: 100%;
+  width: 100%;
+  transform: translateY(-100%);
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.text:hover:before {
+  transform: translateY(0);
+}
+
+a.text:hover {
+  color: white;
+}
