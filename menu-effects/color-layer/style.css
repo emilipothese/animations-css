@@ -1,0 +1,59 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: #006266;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+li {
+  list-style: none;
+  margin: 0px 15px;
+  transition: all 0.5s;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  padding: 5px;
+  position: relative;
+  text-transform: uppercase;
+  display: block;
+  transition: all 0.3s;
+}
+
+ul:hover a {
+  filter: blur(3px);
+  opacity: 0.2;
+}
+
+ul a:hover {
+  transform: scale(1.5);
+  filter: blur(0px);
+  opacity: 1;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:deeppink;
+  transition: all 0.3s;
+  transform: scale(0);
+  z-index: -1;
+}
+
+ul li a:hover:before {
+  transform: scaleX(1);
+}
