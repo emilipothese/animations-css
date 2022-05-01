@@ -3,22 +3,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #26de81;
-  perspective: 200px;
+  background-color: #252366;
 }
 
-.loading {
-  width: 100px;
-  height: 100px;
-  background-color: white;
-  border-radius: 12px;
-  animation: loading 2s linear infinite;
+h1 {
+  color: white;
+  font-size: 40px;
+  font-family: sans-serif;
 }
 
-@keyframes loading {
-  0% { transform: rotateX(0deg) rotateY(0deg); }
+span:before {
+  content: "Transitions";
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color:aquamarine;
+  animation: word-switch 5s infinite;
+}
 
-  50% { transform: rotateX(0deg) rotateY(180deg); }
+@keyframes word-switch {
+  0% { content: "transitions" }
 
-  100% { transform: rotateX(180deg) rotateY(180deg); }
+  50% { content: "animations" }
+
+  100% { content: "transforms" }
 }
